@@ -15,26 +15,31 @@ const Register = () => {
               type="text"
               placeholder="Enter your username"
               className="input-text"
+              required
             />
             <input
               type="text"
               placeholder="Enter your name"
               className="input-text"
+              required
             />
             <input
               type="password"
               placeholder="Enter your password"
               className="input-text"
+              required
             />
             <input
               type="password"
               placeholder="Confirm password"
               className="input-text"
+              required
             />
             <input
               type="submit"
               className="cursor-pointer font-poppins rounded-full px-5 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80"
             />
+            <p>You have already a account <a href=></a></p>
           </form>
         </div>
       </div>
