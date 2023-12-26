@@ -39,13 +39,13 @@ const Register = () => {
                   className="input-text"
                 />
               ) : null}
-              <div className="text-gray-900 font-poppins">
-                <div>
+              <div className="text-gray-900 text-md">
+                <div className="text-white">
                   {isLogedIn
                     ? "Dont have an account? "
                     : "Already have a account "}
                   <a
-                    className="text-blue-800 font-bold"
+                    className="text-blue-600 font-bold text-"
                     onClick={() => setIsLogedIn(!isLogedIn)}
                   >
                     {isLogedIn ? "Sign Up" : "Login"}
