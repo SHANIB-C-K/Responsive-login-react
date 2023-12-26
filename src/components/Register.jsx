@@ -12,7 +12,7 @@ const Register = () => {
           <div className="container h-96 w-96 bg-white bg-opacity-10 rounded-2xl shadow-5xl relative z-2 border border-opacity-30 border-r-0 border-b-0 backdrop-filter backdrop-blur-sm">
             <form className="h-full w-full flex flex-col justify-evenly items-center">
               <div className="text-white font-poppins text-2xl tracking-widest">
-                Registrer Form
+                {isLogedIn ? 'Login': 'Register'} Form
               </div>
               <input
                 type="text"
@@ -48,7 +48,7 @@ const Register = () => {
                     className="text-blue-800 font-bold"
                     onClick={() => setIsLogedIn(!isLogedIn)}
                   >
-                    {isLogedIn ? "Login" : "Sign Up"}
+                    {isLogedIn ? "Sign Up" : "Login"}
                   </a>
                 </div>
               </div>
