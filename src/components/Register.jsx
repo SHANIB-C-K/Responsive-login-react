@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Register = () => {
+  const [isLogedIn, setIsLogedIn] = useState(false);
   return (
     <>
       <div className="bg-gray-900 h-screen w-screen relative overflow-hidden flex items-center justify-center">
@@ -29,17 +30,31 @@ const Register = () => {
               className="input-text"
               required
             />
-            <input
-              type="password"
-              placeholder="Confirm password"
-              className="input-text"
-              required
-            />
+            {!isLogedIn ? (
+              <input
+                placeholder="Conform Password"
+                type="password"
+                className="input-text"
+              />
+            ) : null}
+            <div className="text-gray-900 font-poppins">
+              <div>
+                {isLogedIn
+                  ? "Dont have an account? "
+                  : "Already have a account "}
+                <a
+                  className="text-blue-800 font-bold"
+                  onClick={() => setIsLogedIn(!isLogedIn)}
+                >
+                  {isLogedIn ? "Login" : "Sign Up"}
+                </a>
+              </div>
+            </div>
             <input
               type="submit"
               className="cursor-pointer font-poppins rounded-full px-5 py-1 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80"
+              value={isLogedIn ? "Login" : "Sign up"}
             />
-            <p>You have already a account <a href=></a></p>
           </form>
         </div>
       </div>
